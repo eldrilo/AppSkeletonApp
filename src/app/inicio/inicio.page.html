@@ -1,0 +1,38 @@
+<ion-content >
+  <br>
+  <br>
+  <ion-title style="top: 100px; text-align: center;">
+     <h1> SkeletonAPP</h1>
+  </ion-title>
+  <ion-card-subtitle style="text-align: center;">
+    Aqui comienza todo
+  </ion-card-subtitle>
+  <br>
+  <br>
+  <br>
+  <h2 style="text-align: center;">Bienvenido!</h2>
+  <br>
+
+  <ion-card  *ngFor="let u of usuarios" >
+
+    <ion-label style="right: 500px;" position="stacked">Usuario</ion-label>
+    <ion-input  type="text" maxlength="8" minlength="3"></ion-input>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input type="Password" maxlength="4"></ion-input>
+
+
+  <ion-button expand="full"  fill="outline"
+  [routerLink]="['/home']" [queryParams]="{usuario:u.usuario,
+                                           nombre:u.nombre,
+                                           contrasena: u.contrasena,
+                                           apellido:u.apellido}"
+  >Ingresar</ion-button>
+
+  </ion-card>
+
+  <ion-button expand="full"  fill="Underline"></ion-button>
+
+  <a style="align-items: center;position: relative;left: 70px;
+  bottom: 30px;" href="crea tu cuenta gratis">crea tu cuenta gratis</a>
+
+</ion-content>
