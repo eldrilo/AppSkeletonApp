@@ -11,7 +11,7 @@ export class HomePage {
   apellido: string = '';
   contrasena: string ='';
   educacion: string ='';
-  fNacimeinto: string='';
+  fNacimiento: string='';
 
   constructor(
     private router: ActivatedRoute
@@ -22,6 +22,7 @@ export class HomePage {
       this.nombre=parametros['nombre'];
       this.apellido=parametros['apellido'];
       this.educacion=parametros['educacion'];
+      this.fNacimiento=parametros['fNacimiento'];
     })
   }
 }

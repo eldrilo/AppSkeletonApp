@@ -22,8 +22,8 @@
       <ion-label position="fixed">Nivel Educaional</ion-label>
       <ion-list>
         <ion-item>
-          <ion-select interface="popover" >
-            <ion-select-option value="apples" >Basico</ion-select-option>
+          <ion-select interface="popover"  >
+            <ion-select-option value="apples" > {{educacion}}Basico</ion-select-option>
             <ion-select-option value="oranges">Media completa</ion-select-option>
             <ion-select-option value="bananas">Enseñanza superior</ion-select-option>
           </ion-select>
@@ -33,7 +33,7 @@
     <ion-item  style="position: relative; top: 15px">
       <ion-label position="fixed">Fecha de naciomiento</ion-label>
       <ion-datetime-button datetime="datetime"></ion-datetime-button>
-      <ion-input></ion-input><ion-button><ion-icon name="calendar-number-outline"></ion-icon></ion-button>
+      <ion-input>{{fNacimiento}}</ion-input><ion-button><ion-icon name="calendar-number-outline"></ion-icon></ion-button>
     </ion-item>
     <ion-button [routerLink]="('/inicio')"></ion-button>
   </ion-content>
